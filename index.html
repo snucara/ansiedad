@@ -31,6 +31,7 @@
             list-style: none;
             padding: 0;
             margin: 0;
+            display: flex; /* Flexbox para menú horizontal */
         }
         nav li {
             position: relative;
@@ -41,7 +42,6 @@
             text-decoration: none;
             padding: 10px 20px;
             display: block; /* Para que el área de clic sea más grande */
-            margin-bottom: 10px; /* Espacio entre submenús */
         }
         nav .submenu {
             display: none;
@@ -70,11 +70,10 @@
         }
         @media (max-width: 600px) {
             nav {
-                flex-direction: column;
+                flex-direction: column; /* Cambiar a vertical en móvil */
             }
-            nav a {
-                padding: 10px;
-                text-align: center;
+            nav ul {
+                flex-direction: column; /* Asegura que los menús se alineen verticalmente */
             }
             nav li {
                 margin: 10px 0; /* Espacio entre menús en móviles */
